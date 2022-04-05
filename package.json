@@ -1,0 +1,23 @@
+{
+  "name": "local-state-experimental-schema",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsup src/index.ts --watch --onSuccess \"node dist/index.js\""
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.6",
+    "@saihaj/graphql-to-sqlite": "^0.0.1",
+    "@types/node": "^17.0.23",
+    "graphql": "16.3.0",
+    "sqlite": "^4.0.25",
+    "sqlite3": "^5.0.2",
+    "tsup": "^5.12.4",
+    "tuql": "^1.7.0",
+    "typescript": "^4.6.3"
+  },
+  "resolutions": {
+    "graphql": "16.3.0"
+  }
+}
