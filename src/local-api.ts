@@ -1,6 +1,6 @@
 import { execute, GraphQLSchema, parse } from "graphql";
 import { createLocalDb, LocalDbInstance } from "./local-db";
-import { generateSQLSchema } from "@saihaj/graphql-to-sqlite";
+import { generateSQLSchema } from "./graphql-to-sql";
 import { buildSchemaFromDatabase } from "tuql";
 
 export function createLocalApi(options: {
@@ -52,7 +52,7 @@ export function createLocalApi(options: {
           return execute({
             document: parse(query),
             variableValues: variables,
-            schema: options.schema,
+            schema: schema,
           });
         },
         dbInstance,

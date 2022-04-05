@@ -37,7 +37,6 @@ export async function migrate(db: LocalDbInstance) {
             address: String!
             purposes: [Purpose!]! @derivedFrom(field: "sender")
             createdAt: Int!
-            purposeCount: Int!
           }
         `,
       }),
